@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"log"
+	"math"
 
 	"github.com/go-pdf/fpdf"
 )
@@ -16,10 +17,14 @@ func main() {
 	codeFontSize := 10.5
 	tableHeader := "dec hex   oct  binary char"
 	topMargin := 28.0
-	pdf.SetFont("Courier", "", codeFontSize)
 	x := 10.0
 	y := 1.0
 	for i := 0; i < 128; i++ {
+		pdf.SetFont("Courier", "", codeFontSize)
+		if i != 0 && math.Ceil(math.Log2(float64(i))) == math.Floor(math.Log2(float64(i))) {
+			pdf.SetFont("Courier", "B", codeFontSize)
+		}
+
 		pdf.Text(x, topMargin+5*y, fmt.Sprintf("%3d %3x %5O %7b %q", i, i, i, i, i))
 		if i > 0 && i%47 == 0 {
 			pdf.SetFont("Courier", "B", codeFontSize)
