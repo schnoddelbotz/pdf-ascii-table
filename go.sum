@@ -1,4 +1,2 @@
 github.com/go-pdf/fpdf v0.8.0 h1:IJKpdaagnWUeSkUFUjTcSzTppFxmv8ucGQyNPQWxYOQ=
 github.com/go-pdf/fpdf v0.8.0/go.mod h1:gfqhcNwXrsd3XYKte9a7vM3smvU/jB4ZRDrmWSxpfdc=
-golang.org/x/text v0.10.0 h1:UpjohKhiEgNc0CSauXmwYftY1+LlaC75SJwh0SgCX58=
-golang.org/x/text v0.10.0/go.mod h1:TvPlkZtksWOMsz7fbANvkp4WM8x/WCo/om8BMLbz+aE=
